@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="./stepScroll.js" ></script>
+    </head>
+    <body>
+        <div style="height: 100vh;">
+            Out of scroll 1
+        </div>
+        <div style="height: 100vh;">
+            Out of scroll 2
+        </div>
+        <div id="app">
+
+        </div>
+        <div style="height: 100vh;">
+            Out of scroll 3
+        </div>
+        <div style="height: 100vh;">
+            Out of scroll 4
+        </div>
+    </body>
+    <script>
+        //Create elements
+        window.addEventListener("DOMContentLoaded",() => {
+            const colors = ["red","blue","black","white","violet","grey"];
+            const body = document.getElementById("app");
+
+            for(var color of colors){
+                
+                const container = document.createElement("div");
+                //add custom class
+                container.classList.add("container");
+                container.style.background = color;
+                container.innerHTML = `<h1>${color}</h1>`;
+
+                body.appendChild(container);
+            }
+
+            stepScroll({targetClass: "container", containerId: "app" , tolerance: 150 });
+        });
+    </script>
+    <style>
+        .container{
+            height: 100vh;
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</html>
