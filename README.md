@@ -18,5 +18,5 @@ const options = {
   forceNext: true //Set true if in large scrolls always must go to the next element, otherwise it would scroll to the closest one. (Default: false),
   tolerance: 100 //Tolerance in pixel to don't trigger auto-scroll. (Default: 50)
 }
-stepScroll();
+stepScroll(options);
 ```
