@@ -2,15 +2,15 @@
 
 A simple auto-scroll between elements
 
-##Usage
+## Usage
 
-###Default
+### Default
 
 ``` javascript
 stepScroll();
 ```
 
-###Custom options
+### Custom options
 ``` javascript
 const options = {
   targetClass: 'custom-class' //Element's class. (Default: step-scroll)
